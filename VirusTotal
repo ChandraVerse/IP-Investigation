@@ -1,0 +1,31 @@
+🌐 What is VirusTotal?
+VirusTotal is a free online cybersecurity service that analyzes suspicious files, URLs, IP addresses, and domains to detect malware, viruses, and other threats using over 70 antivirus engines and threat intelligence feeds. It was originally created by Spanish security company Hispasec Sistemas in 2004 and was acquired by Google in September 2012.​
+
+🔍 How it works
+VirusTotal operates on a multiscanning principle—when you upload a file or submit a URL/IP address, it aggregates results from dozens of antivirus products and online scan engines (called "Contributors"). The platform scans your submission against all these engines simultaneously and provides a comprehensive detection report showing how many vendors flagged it as malicious.​
+
+🎯 What you can scan
+📁 Files (up to 650 MB): executables, documents, APKs, scripts, archives​
+
+🔗 URLs: suspicious links, phishing sites, malicious websites​
+
+🌐 IP addresses: check reputation and threat intelligence​
+
+🏷️ Domains: analyze domain reputation and relationships​
+
+🔐 File hashes (SHA-256, MD5): check if a file has been scanned before​
+
+👥 Who uses it?
+VirusTotal is used by security professionals, SOC analysts, malware researchers, IT administrators, penetration testers, and even everyday users who want to verify suspicious downloads or email attachments before opening them. It's particularly valuable for small teams without access to expensive threat intelligence platforms.​
+
+⚠️ Key limitations
+Not an antivirus replacement: VirusTotal only scans and reports—it doesn't remove malware from your device​
+
+Public data: Uploaded files are shared with security partners, so avoid uploading sensitive documents​
+
+False positives possible: If only 1-2 engines detect something while 70+ mark it clean, it might be a false positive​
+
+🔗 Visit VirusTotal
+Official website: https://www.virustotal.com/
+
+You can start scanning immediately without creating an account, though registration provides additional features like API access and scan history tracking.
