@@ -23,3 +23,21 @@ From the “Security vendors’ analysis” list shown:
 🦠 Malware (examples shown): Fortinet, VIPRE
 ⚠️ Suspicious (examples shown): alphaMountain.ai, Gridinsoft
 ✅ Clean (examples shown): Abusix, ADMINUSLabs, AlienVault, benkow.cc, Acronis, AILabs (MONITORAPP), Antiy-AVL, BitDefender
+
+🧠 Analyst interpretation (for reporting)
+🔥 The IP has multi-vendor risk labeling (Malicious/Malware/Suspicious) which increases credibility versus a single-vendor outlier.
+⚖️ At the same time, the presence of many “Clean” verdicts implies it may be context-dependent (e.g., abused hosting, short-lived activity, or vendor coverage differences).
+
+
+
+🧾 Basic Information (ASN - Location - ISP/Provider)
+🌐 Identity & routing context
+🌍 IP Address: 2.57.121.112 
+🧱 Network (CIDR): 2.57.120.0/23 
+🏢 ASN: AS47890 
+🏷️ AS Label / Provider (shown): Unmanaged Ltd 
+
+📍 Geo / registry indicators (from VT Details)
+🗺️ Country: RO (Romania) 
+🌍 Continent: EU 
+🏛️ Regional Internet Registry: RIPE NCC
