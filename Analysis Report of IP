@@ -1,4 +1,5 @@
 🕵️‍♂️ Threat Intelligence Report — IP Investigation (VirusTotal)
+
 📌 Case Header
 🧾 Case Title: IP Investigation Using VirusTotal
 🌐 Investigated IP: 2.57.121.112 
@@ -9,35 +10,108 @@
 
 
 🧭 Investigation Goal (What this report proves)
+
 This report documents the threat posture of a suspicious public IP by collecting VirusTotal’s key intelligence blocks: detections, network/ASN identity, reputation, infrastructure relations, and timeline indicators.
 The intent is to make the output usable for: 🛡️ SOC triage, 🚫 blocking decisions, 🧾 incident tickets, and 📊 stakeholder reporting.
 
 🧨 Detection Overview (Vendor Consensus)
+
 ✅ What VirusTotal shows
 VirusTotal’s detection banner indicates “10/95 security vendors flagged this IP address as malicious.”
 This means a minority of vendors report it as malicious, but the count is significant enough to treat as a credible threat signal—especially when paired with negative community feedback.
 
+
 📋 Observed vendor verdicts (visible in screenshot)
-From the “Security vendors’ analysis” list shown:
+
+From the “Security vendors analysis” list shown:
 🛑 Malicious (examples shown): CRDF, CyRadar, IPsum, SOCRadar, Criminal IP, EmergingThreats, GreenSnow, Lionic
 🦠 Malware (examples shown): Fortinet, VIPRE
 ⚠️ Suspicious (examples shown): alphaMountain.ai, Gridinsoft
 ✅ Clean (examples shown): Abusix, ADMINUSLabs, AlienVault, benkow.cc, Acronis, AILabs (MONITORAPP), Antiy-AVL, BitDefender
 
+
 🧠 Analyst interpretation (for reporting)
+
 🔥 The IP has multi-vendor risk labeling (Malicious/Malware/Suspicious) which increases credibility versus a single-vendor outlier.
 ⚖️ At the same time, the presence of many “Clean” verdicts implies it may be context-dependent (e.g., abused hosting, short-lived activity, or vendor coverage differences).
 
 
 
 🧾 Basic Information (ASN - Location - ISP/Provider)
+
 🌐 Identity & routing context
 🌍 IP Address: 2.57.121.112 
 🧱 Network (CIDR): 2.57.120.0/23 
 🏢 ASN: AS47890 
 🏷️ AS Label / Provider (shown): Unmanaged Ltd 
 
+
 📍 Geo / registry indicators (from VT Details)
+
 🗺️ Country: RO (Romania) 
 🌍 Continent: EU 
 🏛️ Regional Internet Registry: RIPE NCC
+
+
+
+⭐ Reputation Section (Community & Trust Signal)
+
+👥 Community Score
+VirusTotal displays Community Score: -7, which is a direct negative reputation indicator captured in the report header area.
+In reporting terms, this supports phrasing like: “Community sentiment is negative, increasing risk confidence when combined with vendor flags.”
+
+
+🧩 Community activity indicator
+The UI shows the Community tab with “49”, which can be recorded as an engagement/indicator count visible in the interface.
+
+
+
+🔗 Relations (Infrastructure & Ownership Signals)
+🧬 Historical WHOIS lookups
+In the Relations view, VirusTotal shows Historical Whois Lookups (2) for this IP context. 
+The visible entries include “Last Updated” dates 2023-07-20 and 2020-08-24, and an organization label shown as RIPE Network Coordination Centre.
+
+
+
+🧠 Why Relations matter
+Relations/WHOIS history helps answer:
+🔄 Did ownership/registration context change around suspicious activity?
+🏢 Is the network tied to a known hosting/provider footprint that gets abused?
+🧷 Does the IP belong to a broader range (2.57.120.0/23) worth monitoring as a set?
+
+
+
+🗓️ Timeline (Recency + Historical checkpoints)
+⏱️ Recency (security posture now)
+🕒 Last Analysis Date: 2 days ago (from VT header)
+
+📚 Historical context (registration snapshots)
+🗓️ WHOIS historical timestamps shown: 2023-07-20, 2020-08-24
+
+✅ Reporting-friendly phrasing: “Current vendor detections were observed from a recent analysis snapshot (2 days). WHOIS history shows at least two historical checkpoints (2020, 2023) useful for change tracking.”
+
+
+
+🚦 Risk Rating (Human-style verdict)
+
+🧩 Risk posture based on available evidence
+Given 10/95 malicious flags plus Community Score -7, this IP should be treated as Suspicious → Potentially Malicious until validated against internal logs (traffic direction, destination ports, frequency, process/user context).
+This is a strong-enough signal for monitoring and correlation, and may justify temporary containment if observed in confirmed malicious chains (phishing callback, brute-force attempts, C2-like periodic beacons, etc.).
+
+
+
+🛡️ Recommended Actions (SOC/IR-ready)
+
+🔍 Validate internally: Search SIEM/Firewall/Proxy/DNS logs for hits to/from 2.57.121.112.
+🧷 Scope expansion: Also check the broader network 2.57.120.0/23 for related activity.
+🚫 Containment decision: If seen in suspicious auth patterns / scanning / malware traffic, block at perimeter and add to watchlist.
+🧾 Document evidence: Save VT link + screenshot evidence + timestamps (Last analysis: 2 days; WHOIS checkpoints).
+
+
+
+📎 Evidence Captured (What was used)
+
+📸 VirusTotal Detection page showing 10/95 malicious and Community Score -7.
+📸 VirusTotal Details page showing ASN/registry/geo context (RO, EU, RIPE NCC, AS47890).
+📸 VirusTotal Relations page showing Historical WHOIS Lookups (2) and timestamps.
+📸 VirusTotal search landing page confirming the workflow entry point.
