@@ -1,5 +1,4 @@
 # IP-Investigation
-IP Investigation Task Using VirusTotal
 🕵️ IP Investigation Using VirusTotal
 
 Documenting the investigation of a suspicious IP address using VirusTotal.
