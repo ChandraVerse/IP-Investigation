@@ -8,3 +8,18 @@
 
 
 
+🧭 Investigation Goal (What this report proves)
+This report documents the threat posture of a suspicious public IP by collecting VirusTotal’s key intelligence blocks: detections, network/ASN identity, reputation, infrastructure relations, and timeline indicators.
+The intent is to make the output usable for: 🛡️ SOC triage, 🚫 blocking decisions, 🧾 incident tickets, and 📊 stakeholder reporting.
+
+🧨 Detection Overview (Vendor Consensus)
+✅ What VirusTotal shows
+VirusTotal’s detection banner indicates “10/95 security vendors flagged this IP address as malicious.”
+This means a minority of vendors report it as malicious, but the count is significant enough to treat as a credible threat signal—especially when paired with negative community feedback.
+
+📋 Observed vendor verdicts (visible in screenshot)
+From the “Security vendors’ analysis” list shown:
+🛑 Malicious (examples shown): CRDF, CyRadar, IPsum, SOCRadar, Criminal IP, EmergingThreats, GreenSnow, Lionic
+🦠 Malware (examples shown): Fortinet, VIPRE
+⚠️ Suspicious (examples shown): alphaMountain.ai, Gridinsoft
+✅ Clean (examples shown): Abusix, ADMINUSLabs, AlienVault, benkow.cc, Acronis, AILabs (MONITORAPP), Antiy-AVL, BitDefender
